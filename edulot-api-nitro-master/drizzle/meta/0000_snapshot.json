@@ -1,0 +1,274 @@
+{
+  "id": "00000000-0000-0000-0000-000000000000",
+  "prevId": "",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.alembic_version": {
+      "name": "alembic_version",
+      "schema": "",
+      "columns": {
+        "version_num": {
+          "name": "version_num",
+          "type": "varchar(32)",
+          "primaryKey": true,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {},
+      "policies": {},
+      "isRLSEnabled": false
+    },
+    "public.institute": {
+      "name": "institute",
+      "schema": "",
+      "columns": {
+        "name": {
+          "name": "name",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "address": {
+          "name": "address",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "city": {
+          "name": "city",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "state": {
+          "name": "state",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "phone": {
+          "name": "phone",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "email": {
+          "name": "email",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "website": {
+          "name": "website",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "id": {
+          "name": "id",
+          "type": "varchar(21)",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {},
+      "policies": {},
+      "isRLSEnabled": false
+    },
+    "public.institute_nirf_data": {
+      "name": "institute_nirf_data",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "varchar(21)",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "institute_id": {
+          "name": "institute_id",
+          "type": "varchar(21)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ss": {
+          "name": "ss",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "fsr": {
+          "name": "fsr",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "fqe": {
+          "name": "fqe",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "fru": {
+          "name": "fru",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "pu": {
+          "name": "pu",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "qp": {
+          "name": "qp",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "gph": {
+          "name": "gph",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "gue": {
+          "name": "gue",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ms": {
+          "name": "ms",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "rd": {
+          "name": "rd",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "wd": {
+          "name": "wd",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "escs": {
+          "name": "escs",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "pcs": {
+          "name": "pcs",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "pr": {
+          "name": "pr",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "tlr": {
+          "name": "tlr",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "rp": {
+          "name": "rp",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "go": {
+          "name": "go",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "oi": {
+          "name": "oi",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ranking_type": {
+          "name": "ranking_type",
+          "type": "varchar",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ipr": {
+          "name": "ipr",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "fppp": {
+          "name": "fppp",
+          "type": "double precision",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "institute_nirf_data_institute_id_institute_id_fk": {
+          "name": "institute_nirf_data_institute_id_institute_id_fk",
+          "tableFrom": "institute_nirf_data",
+          "tableTo": "institute",
+          "schemaTo": "public",
+          "columnsFrom": [
+            "institute_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {},
+      "policies": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "tables": {}
+  }
+}

@@ -1,0 +1,36 @@
+http://localhost:8000/location
+
+
+// value range 
+
+export const RankInputSchema = z.object({
+  researchScore: z.number().int().min(0).max(5),
+  theoryScore: z.number().int().min(0).max(5),
+  campusLifeScore: z.number().int().min(0).max(5),
+  internationalExposureScore: z.number().int().min(0).max(3),
+  placementRecordScore: z.number().int().min(0).max(3),
+  academicScore: z.number().int().min(0).max(3),
+  infrastructureScore: z.number().int().min(0).max(3),
+  researchOpportunitiesScore: z.number().int().min(0).max(3),
+  industryConnectionScore: z.number().int().min(0).max(3),
+  costEffectivenessScore: z.number().int().min(0).max(3),
+  influenceFactor: z.number().default(0.5),
+  city: z.string(),
+  state: z.string(),
+  rankingType: z.string(),
+});
+4
+
+--------------------------------------------------
+for multiselect:
+3, 2, 1                 - w
+first, second, third    - p
+--------------------------------------------------
+
+
+for rankingType need to fetch from new route!
+
+
+
+dynamic selection type is left !
+
